@@ -1,4 +1,5 @@
 ---
+title: "Development Path JP"
 language: "jp"
 source_note: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

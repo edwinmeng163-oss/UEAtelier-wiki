@@ -1,4 +1,5 @@
 ---
+title: "UEAtelier Project Knowledge Hub JP"
 language: "jp"
 source_note: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

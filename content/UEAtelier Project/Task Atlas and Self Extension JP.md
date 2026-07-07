@@ -1,4 +1,5 @@
 ---
+title: "Task Atlas and Self Extension JP"
 language: "jp"
 source_note: "Task Atlas and Self Extension"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

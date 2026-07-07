@@ -1,4 +1,5 @@
 ---
+title: "Knowledge RAG Elements JP"
 language: "jp"
 source_note: "Knowledge RAG Elements"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

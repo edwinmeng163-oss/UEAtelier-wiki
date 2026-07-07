@@ -1,4 +1,5 @@
 ---
+title: "Git First-Parent History CN"
 language: "cn"
 source_note: "Git First-Parent History"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

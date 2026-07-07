@@ -1,4 +1,5 @@
 ---
+title: "GitHub Release History CN"
 language: "cn"
 source_note: "GitHub Release History"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

@@ -1,4 +1,5 @@
 ---
+title: "Current Object and Status JP"
 language: "jp"
 source_note: "Current Object and Status"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"

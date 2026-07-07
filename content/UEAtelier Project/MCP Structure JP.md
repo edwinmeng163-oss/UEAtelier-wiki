@@ -1,4 +1,5 @@
 ---
+title: "MCP Structure JP"
 language: "jp"
 source_note: "MCP Structure"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
