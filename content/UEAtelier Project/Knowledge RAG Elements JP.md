@@ -4,9 +4,9 @@ language: "jp"
 source_note: "Knowledge RAG Elements"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Knowledge RAG Elements JP
 
@@ -35,5 +35,11 @@ Eval cases は `Tools/UnrealMcpKnowledge/Evals/core_rag_eval.json`（schema `UEv
 ## Privacy
 
 デフォルトでは 5 種類のソースが索引されます：versioned docs、tool registry、official-docs cache、promoted skills（`Tools/UnrealMcpSkills/**/SKILL.md`）、ActivityLog（`includeActivityLog` はデフォルト true、false で無効化可能）。runtime memory（ProjectMemory）、ChatHistory、supervisor logs は v0.34.0 時点で indexer が存在せず、local-only のままです。`runtime-memory` と `test-fixture` の sourceKind は reserved-not-active です。索引データは常にローカルの `Saved/UnrealMcp/KnowledgeIndex/` のみに書き込まれます。
+
+## v0.35 Audit 結果
+
+2026-07-10 の audit で、Gate D RAG test が test source 削除後の cleanup 時に既定の production index を refresh し、`cards.jsonl` と `cardCount` を 0 にできることが判明しました。Chat は “Knowledge index not found” だけを認識し、empty index を回復しません。v0.35 の最初の修正は test index の隔離、empty rebuild による last-known-good 上書きの既定拒否、atomic write、`missing | empty | stale | ready | corrupt` machine state の返却です。
+
+同じ audit で、実装済みの 4 引数（`includeActivityLog`、`includeSkills`、`sourceKinds`、`groupByKind`）が公開 schema にないこと、freshness metadata が source 時刻を示さないこと、2,000-card global truncation が低 weight source kind を排除し得ること、`5.7`/`5.8` token が消え、`ui` が `build` に誤ヒットすることも確認しました。v0.35 では schema parity を修復し、ActivityLog を explicit opt-in に変更し、5.7/5.8 の独立 official-doc seed と engine metadata、heading/fingerprint の保持、source budget diversification、rank-aware positive/negative eval を導入します。詳細は [[v0.35 Development Plan JP]]。
 
 完全な原文: [[Knowledge RAG Elements]]。

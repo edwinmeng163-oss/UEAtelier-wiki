@@ -4,9 +4,9 @@ language: "cn"
 source_note: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # UEAtelier 项目知识中心
 
@@ -22,6 +22,7 @@ generated: "2026-07-04"
 
 - [[Current Object and Status CN]] - UEAtelier 当前对象、发布版本、验证状态。
 - [[Development Path CN]] - 从 git 与 release 还原的发展路径。
+- [[v0.35 Development Plan CN]] - UE 5.7/5.8 优先支持与 RAG 可靠性/质量 gate 的开发计划。
 - [[GitHub Release History CN]] - GitHub Releases 的中文索引；完整原始正文保留在原文页。
 - [[v0.33 Official MCP Preview CN]] - UE 5.8 官方 MCP 验证版结构，和公开 mainline 分离。
 - [[Git First-Parent History CN]] - first-parent 历史的中文导读与原始日志链接。
@@ -45,4 +46,4 @@ generated: "2026-07-04"
 | 默认 endpoint | `http://127.0.0.1:8765/mcp` |
 | ToolRegistry | 190 total, 178 visible, 12 legacy hidden |
 | GitHub releases | 38 releases checked |
-| Git head | `main` / `421440e` |
+| Git head | `main` / `36b6e27` |

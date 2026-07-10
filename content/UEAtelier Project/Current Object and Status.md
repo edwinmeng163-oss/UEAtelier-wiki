@@ -2,9 +2,9 @@
 title: "Current Object and Status"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Current Object and Status
 
@@ -59,6 +59,10 @@ The supported public `main` line and the experimental `v0.33.0-preview` line hav
 | `v0.33.0-preview` | UE 5.8 validation | additive official `ToolsetRegistry + ModelContextProtocol` track at opt-in `:8000/mcp`, plus existing `:8765/mcp` | GitHub pre-release / experimental; branch does not merge to `main` as-is |
 
 See [[v0.33 Official MCP Preview]] and [[GitHub Release History]].
+
+## v0.35 Planned Transition
+
+v0.35 development will prioritize UE 5.7 and UE 5.8, with UE 5.6 retained initially as a transitional maintenance canary. RAG reliability and retrieval quality are the main product focus: test isolation, empty/stale index recovery, schema parity, engine-version-aware retrieval, explainable ranking, and rank-aware eval gates. This is a development decision, not a statement of current release support. See [[v0.35 Development Plan]].
 
 ## Latest Public Release
 

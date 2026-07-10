@@ -25,6 +25,8 @@ for src in vault.rglob("*.md"):
         continue
     rel = src.relative_to(vault)
     text = src.read_text(encoding="utf-8")
+    if not text.strip():
+        continue
 
     # frontmatter carries a machine-local source_repo path; publish the GitHub URL
     text = re.sub(r"^source_repo:.*$", f'source_repo: "{repo_url}"', text, count=1, flags=re.M)

@@ -4,9 +4,9 @@ language: "cn"
 source_note: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Development Path CN
 
@@ -49,6 +49,10 @@ experimental branch。`:8765` + opt-in `:8000` official ToolsetRegistry track。
 ### v0.34.0 - 最新公开版
 
 vetted-toolset authority 与 Codex bridge network fix。UE 5.6/5.7 public line。
+
+### v0.35 - 计划中
+
+下一版本优先 UE 5.7/5.8，UE 5.6 作为过渡期 maintenance canary；先修复空/旧 RAG 索引与测试污染，再推进版本感知检索、source diversity、可解释排序和 rank-aware eval gate。只前移最小 5.8 兼容补丁，不整体合并旧实验分支，也不添加完整内容版 5.8 host。详见 [[v0.35 Development Plan CN]]。
 
 ## Recent History Source
 

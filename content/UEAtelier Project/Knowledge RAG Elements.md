@@ -2,9 +2,9 @@
 title: "Knowledge RAG Elements"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Knowledge RAG Elements
 
@@ -115,6 +115,12 @@ Cases live in `Tools/UnrealMcpKnowledge/Evals/core_rag_eval.json` (schema `UEvol
 6. Use `unreal.workflow_recommend` and `unreal.workflow_run` only after exact arguments and risk gates are clear.
 7. If there is a true gap, follow the self-extension pipeline.
 8. Write the `chat.active_task` ProjectMemory key when the task is long, paused, failed, or near tool round limits (per `Docs/KnowledgeRag.md` "Chat Integration" step 8; `Docs/KnowledgeRagSources.md` §2 plans indexing of selected keys such as `chat.active_task` as `runtime-memory`).
+
+## v0.35 Audit Findings and Priorities
+
+The 2026-07-10 audit found that a Gate D RAG test refreshes the default production index during cleanup after deleting its test source. That can leave `cards.jsonl` empty and `cardCount=0`. Chat only auto-recovers the text error “Knowledge index not found”, so an empty index can silently disable RAG until a manual refresh. This is the first v0.35 defect to fix: isolate test indexes, prevent an empty rebuild from replacing a last-known-good index by default, write index files atomically, and return a machine-readable `missing | empty | stale | ready | corrupt` state.
+
+The same audit found four implemented controls missing from public schemas (`includeActivityLog`, `includeSkills`, `sourceKinds`, `groupByKind`), refresh-time timestamps masquerading as source freshness, a 2,000-card global truncation that can starve lower-weight source kinds, and lexical regressions where `5.7`/`5.8` disappear during tokenization and `ui` matches `build`. v0.35 will repair schema parity, make ActivityLog indexing explicit opt-in, add separate 5.7/5.8 official-doc seeds and engine-version metadata, preserve headings and source fingerprints, diversify source budgets, and replace binary evals with rank-aware positive and negative cases. See [[v0.35 Development Plan]].
 
 ## Source Taxonomy and Event Kinds
 

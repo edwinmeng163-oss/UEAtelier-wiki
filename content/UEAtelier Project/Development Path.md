@@ -2,9 +2,9 @@
 title: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Development Path
 
@@ -15,10 +15,10 @@ This page summarizes the project arc from git history and release docs. The comp
 | Field | Value |
 | --- | --- |
 | Branch | `main` |
-| Head | `421440e` |
-| Describe | `v0.34.0-1-g421440e` |
-| Latest commit | `2026-07-03 421440e docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)` |
-| First-parent commits | 295 |
+| Head | `36b6e27` |
+| Describe | `v0.34.0-2-g36b6e27` |
+| Latest commit | `2026-07-07 36b6e27 docs(readme): link the trilingual Quartz wiki site (all languages)` |
+| First-parent commits | 296 |
 | Worktree status | `clean` |
 
 ## Development Arc
@@ -66,6 +66,10 @@ Task Atlas Make Tool Set rework, CLI <-> Chat sync, Windows Codex CLI provider, 
 ### v0.34.0 (tagged 2026-07-03; release notes 2026-07-02) - Vetted-toolset authority
 
 Task Atlas generated composites can receive in-editor human approval for vetted real writes, bound to live main.py SHA-256 with fail-closed policy and audit; Codex bridge workspace-write network access reaches the local MCP endpoint.
+
+### v0.35 (planned from 2026-07-10) - UE 5.7/5.8 and RAG reliability
+
+The next line prioritizes UE 5.7 and UE 5.8, keeps UE 5.6 as a transitional maintenance canary, and focuses first on preventing empty/stale RAG indexes, then on version-aware retrieval, source diversity, explainable ranking, and rank-aware eval gates. The small validated UE 5.8 compatibility fixes will be forward-ported without merging the old experimental branch or adding a full-content 5.8 host. See [[v0.35 Development Plan]].
 
 ### v0.33.0-preview - tagged after v0.34.0 (2026-07-03)
 

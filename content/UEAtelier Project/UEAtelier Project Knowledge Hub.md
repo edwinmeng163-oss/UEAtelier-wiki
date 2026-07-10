@@ -2,9 +2,9 @@
 title: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 
 # UEAtelier Project Knowledge Hub
@@ -22,6 +22,7 @@ This vault section is generated from the UEAtelier source tree and git history. 
 
 - [[Current Object and Status]] - what UEAtelier is right now, what ships, and what is verified.
 - [[Development Path]] - release and development arc reconstructed from git tags, release docs, and first-parent history.
+- [[v0.35 Development Plan]] - planned UE 5.7/5.8 support transition and RAG reliability/quality release gates.
 - [[GitHub Release History]] - all GitHub releases, assets, digests, bodies, plus tag-only milestones.
 - [[v0.33 Official MCP Preview]] - UE 5.8 official-MCP validation structure, separate from the public mainline.
 - [[Git First-Parent History]] - the full first-parent commit trail captured from git.
@@ -45,11 +46,11 @@ This vault section is generated from the UEAtelier source tree and git history. 
 | Chat UI | `Window > UEAtelier Chat` |
 | Workbench UI | `Window > UEAtelier Workbench` |
 | Registry tools | 190 total, 178 visible, 12 legacy hidden |
-| Git branch/head | `main` / `421440e` |
-| Git describe | `v0.34.0-1-g421440e` |
+| Git branch/head | `main` / `36b6e27` |
+| Git describe | `v0.34.0-2-g36b6e27` |
 | GitHub releases | 38 releases checked; latest public `v0.34.0`; `v0.33.0-preview` is experimental pre-release |
-| First-parent commits | 295 |
-| Latest commit | `2026-07-03 421440e docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)` |
+| First-parent commits | 296 |
+| Latest commit | `2026-07-07 36b6e27 docs(readme): link the trilingual Quartz wiki site (all languages)` |
 | Worktree status when generated | `clean` |
 
 ## Source Files Used

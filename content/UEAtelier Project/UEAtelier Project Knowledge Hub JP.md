@@ -4,9 +4,9 @@ language: "jp"
 source_note: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # UEAtelier プロジェクト知識ハブ
 
@@ -22,6 +22,7 @@ generated: "2026-07-04"
 
 - [[Current Object and Status JP]] - UEAtelier の現在の姿、出荷中のバージョン、検証状態。
 - [[Development Path JP]] - git とリリースから見た開発の流れ。
+- [[v0.35 Development Plan JP]] - UE 5.7/5.8 優先サポートと RAG reliability/quality gate の計画。
 - [[GitHub Release History JP]] - GitHub Releases のローカライズ済み索引。完全な本文は原文ページに保持。
 - [[v0.33 Official MCP Preview JP]] - UE 5.8 公式 MCP 検証版の構造。公開 mainline とは別物。
 - [[Git First-Parent History JP]] - first-parent 履歴の読み方と原文ログへのリンク。
@@ -45,4 +46,4 @@ generated: "2026-07-04"
 | 標準 endpoint | `http://127.0.0.1:8765/mcp` |
 | ToolRegistry | 190 total, 178 visible, 12 legacy hidden |
 | GitHub releases | 38 releases checked |
-| Git head | `main` / `421440e` |
+| Git head | `main` / `36b6e27` |

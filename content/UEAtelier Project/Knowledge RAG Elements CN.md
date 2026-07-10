@@ -4,9 +4,9 @@ language: "cn"
 source_note: "Knowledge RAG Elements"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Knowledge RAG Elements CN
 
@@ -35,5 +35,11 @@ Eval cases 位于 `Tools/UnrealMcpKnowledge/Evals/core_rag_eval.json`（schema `
 ## Privacy
 
 默认索引五类来源：versioned docs、tool registry、official-docs cache、promoted skills（`Tools/UnrealMcpSkills/**/SKILL.md`）、ActivityLog（`includeActivityLog` 默认 true，可传 false 关闭）。runtime memory（ProjectMemory）、ChatHistory、supervisor logs 在 v0.34.0 没有 indexer，保持 local-only；`runtime-memory` 与 `test-fixture` 两个 sourceKind 为 reserved-not-active。索引数据始终只写本地 `Saved/UnrealMcp/KnowledgeIndex/`。
+
+## v0.35 审查结论
+
+2026-07-10 审查发现，Gate D RAG 测试会在删除测试源之后对默认生产索引执行 cleanup refresh，可能把 `cards.jsonl` 与 `cardCount` 清为 0；Chat 只识别 “Knowledge index not found”，不会恢复空索引。v0.35 第一项修复是隔离测试索引、默认禁止空 rebuild 覆盖 last-known-good、原子写入，并返回 `missing | empty | stale | ready | corrupt` 机器状态。
+
+审查还确认四个已实现参数未出现在公开 schema（`includeActivityLog`、`includeSkills`、`sourceKinds`、`groupByKind`），freshness 元数据不真实，2,000 卡全局截断可能饿死低权重 source kind，`5.7`/`5.8` token 会丢失，`ui` 还会错误命中 `build`。v0.35 将修复 schema parity，将 ActivityLog 改为显式 opt-in，增加独立 5.7/5.8 official-doc seed 与 engine metadata，保留 heading/fingerprint，做 source budget diversification，并用 rank-aware positive/negative eval 取代只判断非空的 binary eval。详见 [[v0.35 Development Plan CN]]。
 
 完整原文: [[Knowledge RAG Elements]]。

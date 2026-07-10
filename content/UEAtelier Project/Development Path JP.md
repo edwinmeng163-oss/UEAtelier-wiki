@@ -4,9 +4,9 @@ language: "jp"
 source_note: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "36b6e27"
+source_describe: "v0.34.0-2-g36b6e27"
+generated: "2026-07-10"
 ---
 # Development Path JP
 
@@ -49,6 +49,10 @@ experimental branch。`:8765` + opt-in `:8000` official ToolsetRegistry track。
 ### v0.34.0 - 最新公開版
 
 vetted-toolset authority と Codex bridge network fix。UE 5.6/5.7 public line。
+
+### v0.35 - 計画中
+
+次期版は UE 5.7/5.8 を優先し、UE 5.6 は移行期の maintenance canary とします。まず empty/stale RAG index と test pollution を修復し、その後 version-aware retrieval、source diversity、説明可能な ranking、rank-aware eval gate を進めます。旧 experiment branch は一括 merge せず、最小の 5.8 互換 patch だけを forward-port し、full-content 5.8 host も追加しません。詳細は [[v0.35 Development Plan JP]]。
 
 ## Recent History Source
 
