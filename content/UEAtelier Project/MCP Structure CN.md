@@ -4,13 +4,13 @@ language: "cn"
 source_note: "MCP Structure"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # MCP Structure CN
 
-此页面说明 supported public `main` / `v0.34.0` 的 MCP 结构。`v0.33.0-preview` 是 UE 5.8 official-MCP 验证版，结构不同。
+此页面说明 supported public `main` / `v0.35.0` 的 MCP 结构。`v0.33.0-preview` 是 UE 5.8 official-MCP 验证版，结构不同。
 
 ## Mainline Runtime Shape
 
@@ -35,7 +35,7 @@ generated: "2026-07-04"
 
 | Line | Endpoint | Meaning |
 | --- | --- | --- |
-| `v0.34.0` | `:8765/mcp` | UEAtelier-owned `unreal.*` tool inventory。 |
+| `v0.35.0` | `:8765/mcp` | UEAtelier-owned `unreal.*` tool inventory。 |
 | `v0.33.0-preview` | `:8765/mcp` + opt-in `:8000/mcp` | UE 5.8 official `ToolsetRegistry + ModelContextProtocol` dual-track validation。 |
 
 完整原文: [[MCP Structure]]。

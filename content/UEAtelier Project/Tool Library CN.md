@@ -4,9 +4,9 @@ language: "cn"
 source_note: "Tool Library"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Tool Library CN
 
@@ -43,9 +43,9 @@ generated: "2026-07-04"
 | --- | ---: |
 | critical | 5 |
 | high | 25 |
-| low | 26 |
+| low | 27 |
 | medium | 82 |
-| read_only | 52 |
+| read_only | 51 |
 
 ## All Tools
 
@@ -192,7 +192,7 @@ generated: "2026-07-04"
 | `unreal.capture_project_snapshot` | Capture Project Snapshot | visible | low | 是 | 否 | pre, post | category |
 | `unreal.diff_project_snapshot` | Diff Project Snapshot | visible | read_only | 否 | 否 | - | category |
 | `unreal.install_doctor` | Run Install Doctor | visible | low | 否 | 否 | - | core |
-| `unreal.knowledge_eval_run` | Run Knowledge Evals | visible | read_only | 否 | 否 | - | category |
+| `unreal.knowledge_eval_run` | Run Knowledge Evals | visible | low | 是 | 否 | pre, post | category |
 | `unreal.knowledge_index_refresh` | Refresh Knowledge Index | visible | low | 是 | 是 | pre, post | category |
 | `unreal.knowledge_search` | Search Knowledge Index | visible | read_only | 否 | 否 | - | category |
 | `unreal.mcp_apply_scaffold` | Apply MCP Scaffold | legacy_hidden | high | 是 | 是 | pre, post, lock | category |

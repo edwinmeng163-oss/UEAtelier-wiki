@@ -4,9 +4,9 @@ language: "jp"
 source_note: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Development Path JP
 
@@ -46,20 +46,25 @@ Blueprint gameplay authoring、Code Tools、call_tool、captured args、Make Too
 
 experimental branch。`:8765` + opt-in `:8000` official ToolsetRegistry track。mainline ではない。tag `v0.33.0-preview`(commit `62c1893`)は 2026-07-03 02:45 +0900 に作成され、`v0.34.0` tag(2026-07-03 00:10 +0900)より後。ブランチは `experiment/v0.33-ue58-validation`。
 
-### v0.34.0 - 最新公開版
+### v0.34.0 - vetted-toolset authority
 
-vetted-toolset authority と Codex bridge network fix。UE 5.6/5.7 public line。
+vetted-toolset authority と Codex bridge network fix。UE 5.6/5.7 public line。UE 5.6 をパッケージした最後のラインです。
 
-### v0.35 - 計画中
+### v0.35.0 - 最新公開版（Batch 1、tagged 2026-07-14）
 
-次期版は UE 5.7/5.8 を優先し、UE 5.6 は移行期の maintenance canary とします。まず empty/stale RAG index と test pollution を修復し、その後 version-aware retrieval、source diversity、説明可能な ranking、rank-aware eval gate を進めます。旧 experiment branch は一括 merge せず、最小の 5.8 互換 patch だけを forward-port し、full-content 5.8 host も追加しません。詳細は [[v0.35 Development Plan JP]]。
+UE 5.7 と UE 5.8 が primary source targets になり（root host は 5.7 へ、`Examples/UEvolveExample57` は 5.8 validation host として再利用、UE 5.6 は maintenance compile canary として残置）、RAG 知識層の reliability を全面改修：復旧可能な staged/verified インデックス置換、機械可読なインデックス状態、決定的な ASCII/CJK トークン化、engine-version-aware retrieval、rank-aware eval gate。PR #7（`codex/v035-rag-ue57-ue58`、`db95ade` → `7032a23` → `6a38612`）を `a452bfa` で merge し、その後 `a5ce43d`（三言語 release notes）、`a532d86`（release commit、tag 付与）、`6e7b775`（Win SHA 追記）。これは v0.35 Batch 1 であり、dual-variant 構造と任意の Epic official-MCP 統合は 2026-07-03 の director 決定どおり後続 batch に残ります。詳細は [[v0.35 Development Plan JP]]。
 
 ## Recent History Source
 
 完全な原文 / 完整原文: [[Development Path]], [[GitHub Release History]], [[Git First-Parent History]]
 
 ```text
-2026-07-03 421440e  (HEAD -> main, origin/main, origin/HEAD, claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 6e7b775  (HEAD -> main, origin/main, origin/HEAD) docs: fill v0.35.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 a532d86  (tag: v0.35.0) release: v0.35.0 — UE 5.7/5.8 primary + knowledge-index reliability overhaul
+2026-07-14 a5ce43d  docs: v0.35.0 release notes (EN/中文/日本語) + version bumps
+2026-07-14 a452bfa  Merge pull request #7 from edwinmeng163-oss/codex/v035-rag-ue57-ue58
+2026-07-07 36b6e27  docs(readme): link the trilingual Quartz wiki site (all languages)
+2026-07-03 421440e  (claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
 2026-07-03 dc09f70  (tag: v0.34.0) release: v0.34.0 — vetted-toolset standing authority + bridge network fix
 2026-07-02 29f18c6  test(taskatlas): load SmokeFailedBumps fixture into the registry before smoke
 2026-07-02 74dba2c  docs: v0.34.0 release notes (EN/中文/日本語) + version bumps

@@ -2,10 +2,10 @@
 title: "GitHub Release History"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
 github_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
-github_checked: "2026-07-04"
+github_checked: "2026-07-14"
 ---
 # GitHub Release History
 
@@ -16,19 +16,22 @@ This page is generated from the GitHub Releases API and the local git tag databa
 - GitHub releases page: https://github.com/edwinmeng163-oss/UEAtelier/releases
 - GitHub API releases: `https://api.github.com/repos/edwinmeng163-oss/UEAtelier/releases?per_page=100`
 - GitHub API tags: `https://api.github.com/repos/edwinmeng163-oss/UEAtelier/tags?per_page=100`
-- Local repo at generation: `main` / `421440e` / `v0.34.0-1-g421440e` / `clean`
+- Local repo at generation: `main` / `6e7b775` / `v0.35.0-1-g6e7b775` / `clean`
 
 ## Lineage Notes
 
-- Latest supported public release from GitHub: `v0.34.0` - UEAtelier v0.34.0 — Vetted Toolset Standing Authority (2026-07-02T15:10:46Z).
+- Latest supported public release from GitHub: `v0.35.0` - UEAtelier v0.35.0 — UE 5.7/5.8 Primary Targets + Knowledge-Index Reliability Overhaul (2026-07-14T07:19:46Z).
+- Supported public line after v0.34.0 is `v0.35.0` for UE 5.7 / UE 5.8. UE 5.6 drops to a maintenance compile canary; the last UE 5.6-packaged line is `v0.34.0`.
+- `v0.35.0` is v0.35 Batch 1 (shared-core UE 5.7/5.8 + RAG reliability); the dual-variant structure and optional Epic official-MCP integration remain for a later batch per the 2026-07-03 director decision.
 - `v0.33.0-preview` is a GitHub pre-release and an experimental UE 5.8 official-MCP validation build, not the supported public line.
-- Supported public line after v0.32.2 is `v0.34.0` for UE 5.6 / UE 5.7.
+- Supported public line after v0.32.2 was `v0.34.0` for UE 5.6 / UE 5.7.
 - `v0.33.0-preview` lives on `experiment/v0.33-ue58-validation` and adds an opt-in UE 5.8 official `:8000` server beside UEAtelier's supported `:8765` server.
 
 ## Release Index
 
 | Tag | Published | Pre | Name | Assets | Asset digests | URL |
 | --- | --- | --- | --- | ---: | --- | --- |
+| `v0.35.0` | 2026-07-14T07:19:46Z | false | UEAtelier v0.35.0 — UE 5.7/5.8 Primary Targets + Knowledge-Index Reliability Overhaul | 4 | `UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip` sha256:da235d1ad42db13fec2b9b312e961ba79cb63282f4c0ea03bb62be281b07cb53; `UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip.sha256` sha256:2bb8b4ee2aea3e608925a0e56f0fe6e80cef7907dddd2b51359c597e7b8e79cf; `UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip` sha256:f78fa6f219bb2ca38a54d17cf1cf6dfe2dce0e22be40d37f1f19f5297092d37f; `UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip.sha256` sha256:7182def87f5189620e96569b9fc696e9c60be8eb6eeb23acde3b71fa680ea14b | https://github.com/edwinmeng163-oss/UEAtelier/releases/tag/v0.35.0 |
 | `v0.34.0` | 2026-07-02T15:10:46Z | false | UEAtelier v0.34.0 — Vetted Toolset Standing Authority | 4 | `UnrealMcp-v0.34.0-mac-ue56-ue57-projectroot.zip` sha256:0433eece26423c191d21b5bf6ff8df69ca80abb7b74a2f8466a15915295fc70d; `UnrealMcp-v0.34.0-mac-ue56-ue57-projectroot.zip.sha256` sha256:46388e9d3cea79114bada788c5564c2ca88ffc7f01787df770ec876a6bc17dd1; `UnrealMcp-v0.34.0-win-ue56-ue57-projectroot.zip` sha256:4c666d718c838719f547e1c6e40f0795a8835f864ea04d7e80312b8b8c61a853; `UnrealMcp-v0.34.0-win-ue56-ue57-projectroot.zip.sha256` sha256:f71c626d3946b43e3fb266b11bf2b457f5cd7474d73564f88932c426f84ea061 | https://github.com/edwinmeng163-oss/UEAtelier/releases/tag/v0.34.0 |
 | `v0.33.0-preview` | 2026-07-02T17:45:22Z | true | UEAtelier v0.33.0-preview — UE 5.8 Official-MCP Validation (EXPERIMENTAL) | 4 | `UnrealMcp-v0.33.0-preview-mac-ue56-ue57-ue58-projectroot.zip` sha256:47734b988e4cd0c4b02769e0b7345a16d0e80c3a90af27fec1c0b2ed526f2858; `UnrealMcp-v0.33.0-preview-mac-ue56-ue57-ue58-projectroot.zip.sha256` sha256:cb234ce2a2d411e3ef4835e1f2398c452a9accfb10d1a45d3998518dce8edecc; `UnrealMcp-v0.33.0-preview-win-ue56-ue57-ue58-projectroot.zip` sha256:6c2c595fa90be67030fe1644372a70229694a0991b71a544eb07aba8cb466581; `UnrealMcp-v0.33.0-preview-win-ue56-ue57-ue58-projectroot.zip.sha256` sha256:f4a0208c8cce99890503aaa57ec6510b0682e0d9ac4994e0e55f19280469ff7e | https://github.com/edwinmeng163-oss/UEAtelier/releases/tag/v0.33.0-preview |
 | `v0.32.2` | 2026-06-10T17:00:59Z | false | UEAtelier v0.32.2 — MCP protocol conformance fix + wire-shape guardrails | 4 | `UnrealMcp-v0.32.2-mac-ue56-ue57-projectroot.zip` sha256:2f13f966dc9e69061c0d3b9e85cc1577c04223bce4e434bf287c94e1b7d3855b; `UnrealMcp-v0.32.2-mac-ue56-ue57-projectroot.zip.sha256` sha256:49c0f874b64f3260ef75147b0a97f540c3589f75c6609e8028684af941155c6d; `UnrealMcp-v0.32.2-win-ue56-ue57-projectroot.zip` sha256:4099a475315b09f5043979d77883bc85ebca05081ee9ab153709ad1342fcab76; `UnrealMcp-v0.32.2-win-ue56-ue57-projectroot.zip.sha256` sha256:939673bb3d9df251a3312e91c27bcd0d1d451043c867d6ef2b05bf3829634825 | https://github.com/edwinmeng163-oss/UEAtelier/releases/tag/v0.32.2 |
@@ -79,6 +82,64 @@ This page is generated from the GitHub Releases API and the local git tag databa
 | `v0.11.0-export-gate` | `c186552` | v0.11.0-export-gate Milestone: export gating + path resolver + chat panel buttons |
 
 ## Release Details
+
+### v0.35.0 - UEAtelier v0.35.0 — UE 5.7/5.8 Primary Targets + Knowledge-Index Reliability Overhaul
+
+- GitHub URL: https://github.com/edwinmeng163-oss/UEAtelier/releases/tag/v0.35.0
+- Published: `2026-07-14T07:19:46Z`
+- Created: `2026-07-14T07:19:42Z`
+- Updated: `2026-07-14T07:21:31Z`
+- Draft: `False`
+- Pre-release: `False`
+- Target commitish: `main`
+- Tarball: https://api.github.com/repos/edwinmeng163-oss/UEAtelier/tarball/v0.35.0
+- Zipball: https://api.github.com/repos/edwinmeng163-oss/UEAtelier/zipball/v0.35.0
+
+| Asset | Size | Digest | Downloads | URL |
+| --- | ---: | --- | ---: | --- |
+| `UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip` | 978.2 KiB | `sha256:da235d1ad42db13fec2b9b312e961ba79cb63282f4c0ea03bb62be281b07cb53` | 0 | https://github.com/edwinmeng163-oss/UEAtelier/releases/download/v0.35.0/UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip |
+| `UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip.sha256` | 114 B | `sha256:2bb8b4ee2aea3e608925a0e56f0fe6e80cef7907dddd2b51359c597e7b8e79cf` | 0 | https://github.com/edwinmeng163-oss/UEAtelier/releases/download/v0.35.0/UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip.sha256 |
+| `UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip` | 974.7 KiB | `sha256:f78fa6f219bb2ca38a54d17cf1cf6dfe2dce0e22be40d37f1f19f5297092d37f` | 0 | https://github.com/edwinmeng163-oss/UEAtelier/releases/download/v0.35.0/UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip |
+| `UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip.sha256` | 115 B | `sha256:7182def87f5189620e96569b9fc696e9c60be8eb6eeb23acde3b71fa680ea14b` | 0 | https://github.com/edwinmeng163-oss/UEAtelier/releases/download/v0.35.0/UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip.sha256 |
+
+#### Release Body
+
+UE 5.7 and 5.8 become the primary source targets (UE 5.6 stays a maintenance compile canary), and the RAG knowledge layer is overhauled: an interrupted refresh can no longer destroy the index, and retrieval is deterministic across platforms and languages. This is **Batch 1** of the v0.35 plan — the dual-variant structure and optional Epic official-MCP integration follow in a later batch.
+
+Full trilingual notes (EN / 中文 / 日本語): [`Docs/Release-2026-07b.md`](https://github.com/edwinmeng163-oss/UEAtelier/blob/main/Docs/Release-2026-07b.md)
+
+## Highlights
+
+- **UE 5.7 / UE 5.8 primary**: root host on 5.7, `Examples/UEvolveExample57` reused as the 5.8 validation host; all engine-version logic confined to `UnrealMcpEngineCompat.h`.
+- **KnowledgeIndex v2 reliability**: staged/verified pair replacement with recoverable last-known-good `.bak` pairs and load-time auto-recovery; machine-readable `missing|empty|stale|ready|corrupt` states; metadata-checked warm cache.
+- **Retrieval quality**: deterministic ASCII/CJK tokenization (Latin tokens inside 中文/日本語 prose stay searchable), known-engine-only numeric version filtering, original-token-over-synonym ranking, source/engine diversity.
+- **Official-doc pipeline**: curated UE 5.7 + 5.8 seeds, per-entry `engineVersion`, version-separated caches, Markdown heading preservation.
+- **Windows CI hardening**: artifact-only candidates from an exact SHA, fail-closed tag↔`VersionName` gate, `persist-credentials: false`, Python tests in pre-package validation.
+- **Packaged CLIs**: `unreal_mcp_fetch_docs.py` and `install_unrealmcp_to_project.py` ship in the projectroot zips.
+
+Tool count stays **190** (visible `tools/list` count 178). No schema migration. Drop-in upgrade from v0.34.0 for UE 5.7/5.8 hosts.
+
+## Verification
+
+- UE 5.7 + UE 5.8: clean Example57-host UBT builds from wiped intermediates.
+- Per engine: RAG 17/17, Gate D 1/1, EngineCompat 2/2, version migration 1/1, VetMadeTool 11/11, VettedToolset 5/5, CallTool 9/9, TaskAtlas 38/38.
+- Full-host automation: UE 5.7 208 passed / UE 5.8 208 passed, both converging to the two documented baseline failures (`RunRecoversStale`, `PieSmoke.MapValidation`).
+- Registry validation 190/190 (issueCount 0, mirrors byte-identical); Python fetcher/installer tests 8/8.
+- Stage 2 e2e on fresh `/tmp` TP_Blank projects for UE 5.7 and UE 5.8: extract → real UBT build → editor boot → port 8765 → MCP SDK conformance → smoke calls.
+- Strict source-package integrity: 0 blocking, 0 warnings.
+- Windows zips are packaged by the tag-push CI from this tagged revision; the Windows UE 5.7/5.8 UBT validation report is tracked as a follow-up issue.
+
+## Assets
+
+Extract the projectroot zip **next to your `<YourProject>.uproject`** (NOT under `Plugins/`); UBT compiles the plugin on first editor launch or an explicit editor-target build. See the packaged `INSTALL.md`.
+
+```text
+UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip
+SHA-256: da235d1ad42db13fec2b9b312e961ba79cb63282f4c0ea03bb62be281b07cb53
+
+UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip
+SHA-256: f78fa6f219bb2ca38a54d17cf1cf6dfe2dce0e22be40d37f1f19f5297092d37f
+```
 
 ### v0.34.0 - UEAtelier v0.34.0 — Vetted Toolset Standing Authority
 

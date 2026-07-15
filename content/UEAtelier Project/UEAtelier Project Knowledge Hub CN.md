@@ -4,9 +4,9 @@ language: "cn"
 source_note: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # UEAtelier 项目知识中心
 
@@ -22,7 +22,7 @@ generated: "2026-07-10"
 
 - [[Current Object and Status CN]] - UEAtelier 当前对象、发布版本、验证状态。
 - [[Development Path CN]] - 从 git 与 release 还原的发展路径。
-- [[v0.35 Development Plan CN]] - UE 5.7/5.8 优先支持与 RAG 可靠性/质量 gate 的开发计划。
+- [[v0.35 Development Plan CN]] - UE 5.7/5.8 优先支持与 RAG 可靠性/质量 gate 的开发计划；Batch 1 已作为 `v0.35.0` 发布，dual-variant 结构留给后续 batch。
 - [[GitHub Release History CN]] - GitHub Releases 的中文索引；完整原始正文保留在原文页。
 - [[v0.33 Official MCP Preview CN]] - UE 5.8 官方 MCP 验证版结构，和公开 mainline 分离。
 - [[Git First-Parent History CN]] - first-parent 历史的中文导读与原始日志链接。
@@ -40,10 +40,10 @@ generated: "2026-07-10"
 | --- | --- |
 | 产品 | UEAtelier, Unreal Editor MCP self-extension workbench |
 | 主交付物 | `Plugins/UnrealMcp` |
-| 最新公开版 | `v0.34.0` |
+| 最新公开版 | `v0.35.0` |
 | 实验 preview | `v0.33.0-preview` 是 UE 5.8 official-MCP 验证版 |
-| 支持引擎 | public mainline 支持 UE 5.6 / UE 5.7 |
+| 支持引擎 | public mainline 以 UE 5.7 / UE 5.8 为 primary（UE 5.6 为 maintenance compile canary） |
 | 默认 endpoint | `http://127.0.0.1:8765/mcp` |
 | ToolRegistry | 190 total, 178 visible, 12 legacy hidden |
-| GitHub releases | 38 releases checked |
-| Git head | `main` / `36b6e27` |
+| GitHub releases | 39 releases checked |
+| Git head | `main` / `6e7b775` |

@@ -2,9 +2,9 @@
 title: "Source Map and Safety Rules"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Source Map and Safety Rules
 
@@ -32,8 +32,8 @@ Tools/UnrealMcpSupervisorTemplates/
 Tools/extract_tool_schemas.py, Tools/generate_tool_docs.py
 Tools/install_unrealmcp_to_project.py, Tools/validate_tool_registry.py
 Tools/unreal_mcp_fetch_docs.py, Tools/unreal_mcp_stdio_proxy.py, Tools/unreal_mcp_supervisor.py
-Docs/Release-2026-05.md, Docs/Release-2026-06.md, Docs/Release-2026-06b.md, Docs/Release-2026-06c.md, Docs/Release-2026-07.md
-Examples/UEvolveExample/ (UE 5.6.1 sample host), Examples/UEvolveExample57/ (UE 5.7.4 sample host)
+Docs/Release-2026-05.md, Docs/Release-2026-06.md, Docs/Release-2026-06b.md, Docs/Release-2026-06c.md, Docs/Release-2026-07.md, Docs/Release-2026-07b.md, Docs/Development-0.35.md
+Examples/UEvolveExample/ (UE 5.6 maintenance-canary host), Examples/UEvolveExample57/ (UE 5.7.4 sample host, also the UE 5.8 build/commandlet host)
 Tools/check_ue56_compat.py, Tools/git-hooks/pre-commit, Tools/install_git_hooks.sh, Tools/install_git_hooks.ps1
 Tools/codex-prompt-header.md, Tools/package_plugin.ps1, Tools/UnrealMcpPyTools/
 ```
@@ -66,9 +66,10 @@ grep -nE "registry contained|registered MCP tools" AGENTS.md README.md Docs/agen
 
 ## Multi-Engine Discipline
 
-- UEAtelier supports UE 5.6 and UE 5.7 from the same source tree.
-- All `#if ENGINE_*_VERSION` belongs in `UnrealMcpEngineCompat.h`.
-- Run `Tools/install_git_hooks.sh` (Windows: `Tools/install_git_hooks.ps1`) once after clone. It installs `Tools/git-hooks/pre-commit`, which runs the `Tools/check_ue56_compat.py` engine-compat linter (must report 0 errors, 0 warnings — any warning means engine-version preprocessor logic leaked outside `UnrealMcpEngineCompat.h`) plus `python3 Tools/validate_tool_registry.py` on every commit.
+- The v0.35 source line prioritizes UE 5.7 and UE 5.8 as primary targets; UE 5.6 remains a maintenance compile canary from the same source tree.
+- All `#if ENGINE_*_VERSION` belongs in `UnrealMcpEngineCompat.h` (v0.35 adds a `>=5.8` `FJsonObject::Values` arm there).
+- Before switching the shared `Examples/UEvolveExample57` host between UE 5.7 and UE 5.8, delete both the plugin and host `Binaries/` and `Intermediate/` directories; partial platform/build-subdirectory cleanup is insufficient.
+- Run `Tools/install_git_hooks.sh` (Windows: `Tools/install_git_hooks.ps1`) once after clone. It installs `Tools/git-hooks/pre-commit`, which runs the `Tools/check_ue56_compat.py` engine-compat linter (must report 0 errors, 0 warnings — any warning means engine-version preprocessor logic leaked outside `UnrealMcpEngineCompat.h`; v0.35 adds the UE 5.8 `FJsonObject::Values` pattern) plus `python3 Tools/validate_tool_registry.py` on every commit.
 - `EAiProviderKind` enum values are append-only; do not renumber.
 
 ## Safety Rules For Future AI
@@ -107,4 +108,4 @@ git branch --show-current
 python3 Tools/validate_tool_registry.py
 ```
 
-At generation time, the source worktree was clean on `main` and registry validation reported `issueCount: 0` with 190 tools.
+At generation time, `main` was at `6e7b775` (one commit past the `v0.35.0` tag) and registry validation reported `issueCount: 0` with 190 tools and a byte-identical plugin mirror.

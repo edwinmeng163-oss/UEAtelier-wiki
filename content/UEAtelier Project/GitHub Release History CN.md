@@ -4,16 +4,17 @@ language: "cn"
 source_note: "GitHub Release History"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # GitHub Release History CN
 
-从 GitHub Releases API 生成的中文索引。完整 release body 与 asset digest 保留在 [[GitHub Release History]]。`v0.33.0-preview` 是实验性 UE 5.8 preview，supported public line 是 `v0.34.0`。
+从 GitHub Releases API 生成的中文索引。完整 release body 与 asset digest 保留在 [[GitHub Release History]]。`v0.33.0-preview` 是实验性 UE 5.8 preview，supported public line 是 `v0.35.0`(UE 5.7 / UE 5.8)；`v0.34.0` 之后的 supported line 即为 `v0.35.0`，UE 5.6 降级为 maintenance compile canary，最后一个打包 UE 5.6 的版本线是 `v0.34.0`。
 
 | 发布 | 发布时间 | 预发布 | 名称 | 资产 | Digest |
 | --- | --- | --- | --- | ---: | --- |
+| `v0.35.0` | 2026-07-14T07:19:46Z | false | UEAtelier v0.35.0 — UE 5.7/5.8 Primary Targets + Knowledge-Index Reliability Overhaul | 4 | `UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip` sha256:da235d1ad42db13fec2b9b312e961ba79cb63282f4c0ea03bb62be281b07cb53; `UnrealMcp-v0.35.0-mac-ue57-ue58-projectroot.zip.sha256` sha256:2bb8b4ee2aea3e608925a0e56f0fe6e80cef7907dddd2b51359c597e7b8e79cf; `UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip` sha256:f78fa6f219bb2ca38a54d17cf1cf6dfe2dce0e22be40d37f1f19f5297092d37f; `UnrealMcp-v0.35.0-win-ue57-ue58-projectroot.zip.sha256` sha256:7182def87f5189620e96569b9fc696e9c60be8eb6eeb23acde3b71fa680ea14b |
 | `v0.34.0` | 2026-07-02T15:10:46Z | false | UEAtelier v0.34.0 — Vetted Toolset Standing Authority | 4 | `UnrealMcp-v0.34.0-mac-ue56-ue57-projectroot.zip` sha256:0433eece26423c191d21b5bf6ff8df69ca80abb7b74a2f8466a15915295fc70d; `UnrealMcp-v0.34.0-mac-ue56-ue57-projectroot.zip.sha256` sha256:46388e9d3cea79114bada788c5564c2ca88ffc7f01787df770ec876a6bc17dd1; `UnrealMcp-v0.34.0-win-ue56-ue57-projectroot.zip` sha256:4c666d718c838719f547e1c6e40f0795a8835f864ea04d7e80312b8b8c61a853; `UnrealMcp-v0.34.0-win-ue56-ue57-projectroot.zip.sha256` sha256:f71c626d3946b43e3fb266b11bf2b457f5cd7474d73564f88932c426f84ea061 |
 | `v0.33.0-preview` | 2026-07-02T17:45:22Z | true | UEAtelier v0.33.0-preview — UE 5.8 Official-MCP Validation (EXPERIMENTAL) | 4 | `UnrealMcp-v0.33.0-preview-mac-ue56-ue57-ue58-projectroot.zip` sha256:47734b988e4cd0c4b02769e0b7345a16d0e80c3a90af27fec1c0b2ed526f2858; `UnrealMcp-v0.33.0-preview-mac-ue56-ue57-ue58-projectroot.zip.sha256` sha256:cb234ce2a2d411e3ef4835e1f2398c452a9accfb10d1a45d3998518dce8edecc; `UnrealMcp-v0.33.0-preview-win-ue56-ue57-ue58-projectroot.zip` sha256:6c2c595fa90be67030fe1644372a70229694a0991b71a544eb07aba8cb466581; `UnrealMcp-v0.33.0-preview-win-ue56-ue57-ue58-projectroot.zip.sha256` sha256:f4a0208c8cce99890503aaa57ec6510b0682e0d9ac4994e0e55f19280469ff7e |
 | `v0.32.2` | 2026-06-10T17:00:59Z | false | UEAtelier v0.32.2 — MCP protocol conformance fix + wire-shape guardrails | 4 | `UnrealMcp-v0.32.2-mac-ue56-ue57-projectroot.zip` sha256:2f13f966dc9e69061c0d3b9e85cc1577c04223bce4e434bf287c94e1b7d3855b; `UnrealMcp-v0.32.2-mac-ue56-ue57-projectroot.zip.sha256` sha256:49c0f874b64f3260ef75147b0a97f540c3589f75c6609e8028684af941155c6d; `UnrealMcp-v0.32.2-win-ue56-ue57-projectroot.zip` sha256:4099a475315b09f5043979d77883bc85ebca05081ee9ab153709ad1342fcab76; `UnrealMcp-v0.32.2-win-ue56-ue57-projectroot.zip.sha256` sha256:939673bb3d9df251a3312e91c27bcd0d1d451043c867d6ef2b05bf3829634825 |

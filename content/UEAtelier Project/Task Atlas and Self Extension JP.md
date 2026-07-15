@@ -4,9 +4,9 @@ language: "jp"
 source_note: "Task Atlas and Self Extension"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Task Atlas and Self Extension JP
 

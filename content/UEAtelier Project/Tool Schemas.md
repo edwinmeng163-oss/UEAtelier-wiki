@@ -2,9 +2,9 @@
 title: "Tool Schemas"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Tool Schemas
 
@@ -803,7 +803,7 @@ This page summarizes each registry entry and its top-level input schema. It is i
 - Title: Project Version Migration
 - Category/risk/exposure: `editor` / `high` / `visible`
 - Handler: `unreal.project_version_migration`
-- Description: Updates a .uproject EngineAssociation between UE 5.6 and UE 5.7 and reports remaining manual rebuild steps.
+- Description: Updates a .uproject EngineAssociation across UE 5.6, UE 5.7, and UE 5.8, reports the support tier, and lists remaining manual rebuild steps.
 - Required fields: `targetEngineVersion`
 - Top-level properties: `targetEngineVersion*`:string, `dryRun`:boolean, `projectFilePath`:string
 - Docs: `README.md#tool-coverage`
@@ -1069,11 +1069,11 @@ This page summarizes each registry entry and its top-level input schema. It is i
 ### `unreal.knowledge_eval_run`
 
 - Title: Run Knowledge Evals
-- Category/risk/exposure: `self-extension` / `read_only` / `visible`
+- Category/risk/exposure: `self-extension` / `low` / `visible`
 - Handler: `unreal.knowledge_eval_run`
 - Description: Runs the offline RAG retrieval evaluation suite under Tools/UnrealMcpKnowledge/Evals/ and reports recall plus per-question diagnostics.
 - Required fields: none
-- Top-level properties: `evalPath`:string, `refreshIndex`:boolean, `includeDetails`:boolean, `limit`:number
+- Top-level properties: `evalPath`:string, `indexRoot`:string, `refreshIndex`:boolean, `includeDetails`:boolean, `limit`:number
 - Docs: `Docs/KnowledgeRag.md`
 
 ### `unreal.knowledge_index_refresh`
@@ -1083,7 +1083,7 @@ This page summarizes each registry entry and its top-level input schema. It is i
 - Handler: `unreal.knowledge_index_refresh`
 - Description: Rebuilds the local Saved/UnrealMcp/KnowledgeIndex/ JSONL index from fetched docs plus visible tool metadata for RAG retrieval; call after upstream docs change or after a registry-changing chunk.
 - Required fields: none
-- Top-level properties: `sourceRoot`:string, `indexRoot`:string, `includeOfficialDocs`:boolean, `includeVersionedDocs`:boolean, `includeToolRegistry`:boolean, `skipLowContent`:boolean, `maxCards`:number, `maxChunkChars`:number, `chunkOverlapChars`:number, `dryRun`:boolean
+- Top-level properties: `sourceRoot`:string, `indexRoot`:string, `includeOfficialDocs`:boolean, `includePromotedSources`:boolean, `includeVersionedDocs`:boolean, `includeToolRegistry`:boolean, `includeActivityLog`:boolean, `includeSkills`:boolean, `allowEmptyIndex`:boolean, `skipLowContent`:boolean, `maxCards`:number, `maxChunkChars`:number, `chunkOverlapChars`:number, `dryRun`:boolean
 - Docs: `Docs/KnowledgeRag.md`
 
 ### `unreal.knowledge_search`
@@ -1093,7 +1093,7 @@ This page summarizes each registry entry and its top-level input schema. It is i
 - Handler: `unreal.knowledge_search`
 - Description: Reads the local KnowledgeCard index and returns compact source-linked cards; use for planning, tool choice, and verification, and call unreal.knowledge_index_refresh first if the index is missing.
 - Required fields: none
-- Top-level properties: `query`:string, `categories`:array, `indexRoot`:string, `limit`:number, `maxExcerptChars`:number, `includeText`:boolean
+- Top-level properties: `query`:string, `categories`:array, `sourceKinds`:array, `groupByKind`:boolean, `indexRoot`:string, `limit`:number, `maxExcerptChars`:number, `includeText`:boolean
 - Docs: `Docs/KnowledgeRag.md`
 
 ### `unreal.mcp_apply_scaffold`
@@ -1443,7 +1443,7 @@ This page summarizes each registry entry and its top-level input schema. It is i
 - Handler: `unreal.tool_recommend`
 - Description: Given a task description, returns ranked tool suggestions from the local registry plus knowledge index.
 - Required fields: none
-- Top-level properties: `task`:string, `riskMax`:string, `limit`:number, `includeKnowledge`:boolean, `includeWorkflowDraft`:boolean
+- Top-level properties: `task`:string, `indexRoot`:string, `riskMax`:string, `limit`:number, `includeKnowledge`:boolean, `includeWorkflowDraft`:boolean
 - Docs: `Docs/KnowledgeRag.md`
 
 ### `unreal.tools.export_package`

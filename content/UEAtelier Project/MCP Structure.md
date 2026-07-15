@@ -2,19 +2,19 @@
 title: "MCP Structure"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # MCP Structure
 
 ## Versioned MCP Structures
 
-This page primarily describes the supported public `main`/`v0.34.0` structure. `v0.33.0-preview` is intentionally different: it is a UE 5.8 official-MCP validation branch and should be read through [[v0.33 Official MCP Preview]].
+This page primarily describes the supported public `main`/`v0.35.0` structure. `v0.33.0-preview` is intentionally different: it is a UE 5.8 official-MCP validation branch and should be read through [[v0.33 Official MCP Preview]].
 
 | Version line | Endpoint(s) | Meaning |
 | --- | --- | --- |
-| `v0.34.0` supported public line | `http://127.0.0.1:8765/mcp` | UEAtelier-owned JSON-RPC MCP endpoint serving the `unreal.*` tool inventory. |
+| `v0.35.0` supported public line | `http://127.0.0.1:8765/mcp` | UEAtelier-owned JSON-RPC MCP endpoint serving the `unreal.*` tool inventory. |
 | `v0.33.0-preview` UE 5.8 experiment | `:8765/mcp` plus opt-in official `:8000/mcp` | Dual-track validation with UE 5.8 `ToolsetRegistry + ModelContextProtocol`; official server is stateful streamable HTTP and exposes `list_toolsets`, `describe_toolset`, and `call_tool` meta-tools. |
 
 The `v0.33.0-preview` official track is behind `UNREALMCP_HAS_OFFICIAL_TOOLSETS`; UE 5.6/5.7 builds are intended to be byte-unaffected. Generated official toolsets must delegate into UEAtelier's audited `call_tool` policy executor.

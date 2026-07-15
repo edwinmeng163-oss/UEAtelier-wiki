@@ -2,9 +2,9 @@
 title: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Development Path
 
@@ -15,10 +15,10 @@ This page summarizes the project arc from git history and release docs. The comp
 | Field | Value |
 | --- | --- |
 | Branch | `main` |
-| Head | `36b6e27` |
-| Describe | `v0.34.0-2-g36b6e27` |
-| Latest commit | `2026-07-07 36b6e27 docs(readme): link the trilingual Quartz wiki site (all languages)` |
-| First-parent commits | 296 |
+| Head | `6e7b775` |
+| Describe | `v0.35.0-1-g6e7b775` |
+| Latest commit | `2026-07-14 6e7b775 docs: fill v0.35.0 Win zip SHA-256 into release notes (all languages)` |
+| First-parent commits | 300 |
 | Worktree status | `clean` |
 
 ## Development Arc
@@ -67,9 +67,9 @@ Task Atlas Make Tool Set rework, CLI <-> Chat sync, Windows Codex CLI provider, 
 
 Task Atlas generated composites can receive in-editor human approval for vetted real writes, bound to live main.py SHA-256 with fail-closed policy and audit; Codex bridge workspace-write network access reaches the local MCP endpoint.
 
-### v0.35 (planned from 2026-07-10) - UE 5.7/5.8 and RAG reliability
+### v0.35.0 (tagged 2026-07-14) - UE 5.7/5.8 primary targets + knowledge-index reliability (Batch 1)
 
-The next line prioritizes UE 5.7 and UE 5.8, keeps UE 5.6 as a transitional maintenance canary, and focuses first on preventing empty/stale RAG indexes, then on version-aware retrieval, source diversity, explainable ranking, and rank-aware eval gates. The small validated UE 5.8 compatibility fixes will be forward-ported without merging the old experimental branch or adding a full-content 5.8 host. See [[v0.35 Development Plan]].
+UE 5.7 and UE 5.8 become the primary source targets (root host on 5.7, `Examples/UEvolveExample57` reused as the 5.8 validation host, UE 5.6 kept as a maintenance compile canary), and the RAG knowledge layer is overhauled: recoverable staged/verified index replacement, machine-readable index states, deterministic ASCII/CJK tokenization, engine-version-aware retrieval, and rank-aware eval gates. Landed via PR #7 (`codex/v035-rag-ue57-ue58`, `db95ade` → `7032a23` → `6a38612`) merged at `a452bfa`, followed by trilingual notes `a5ce43d`, the tagged release commit `a532d86`, and the Win-SHA backfill `6e7b775`. This is v0.35 Batch 1; the dual-variant structure and optional Epic official-MCP integration remain for a later batch per the 2026-07-03 director decision. See [[v0.35 Development Plan]].
 
 ### v0.33.0-preview - tagged after v0.34.0 (2026-07-03)
 
@@ -77,7 +77,7 @@ Tag `v0.33.0-preview` (commit `62c1893`) was created 2026-07-03 02:45 +0900 — 
 
 ## Release/Tag Timeline
 
-Sorted by tag creation date (regenerated via `git tag -l --sort=creatordate --format='%(creatordate:short) %(refname:short)  %(contents:subject)'`). The last two lines are the true creation order: `v0.33.0-preview` was tagged ~2.5 hours after `v0.34.0` on 2026-07-03.
+Sorted by tag creation date (regenerated via `git tag -l --sort=creatordate --format='%(creatordate:short) %(refname:short)  %(contents:subject)'`). Note the 2026-07-03 pair: `v0.33.0-preview` was tagged ~2.5 hours after `v0.34.0`, so that is the true creation order.
 
 ```text
 2026-05-12 v0.11.0-export-gate  Milestone: export gating + path resolver + chat panel buttons
@@ -123,12 +123,18 @@ Sorted by tag creation date (regenerated via `git tag -l --sort=creatordate --fo
 2026-06-11 v0.32.2  release: v0.32.2 — MCP protocol conformance fix + wire-shape guardrails
 2026-07-03 v0.34.0  release: v0.34.0 — vetted-toolset standing authority + bridge network fix
 2026-07-03 v0.33.0-preview  release: v0.33.0-preview — UE5.8 official-MCP validation preview
+2026-07-14 v0.35.0  UEAtelier v0.35.0 — UE 5.7/5.8 primary targets + knowledge-index reliability overhaul (v0.35 Batch 1)
 ```
 
 ## Recent First-Parent History
 
 ```text
-2026-07-03 421440e  (HEAD -> main, origin/main, origin/HEAD, claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 6e7b775  (HEAD -> main, origin/main, origin/HEAD) docs: fill v0.35.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 a532d86  (tag: v0.35.0) release: v0.35.0 — UE 5.7/5.8 primary + knowledge-index reliability overhaul
+2026-07-14 a5ce43d  docs: v0.35.0 release notes (EN/中文/日本語) + version bumps
+2026-07-14 a452bfa  Merge pull request #7 from edwinmeng163-oss/codex/v035-rag-ue57-ue58
+2026-07-07 36b6e27  docs(readme): link the trilingual Quartz wiki site (all languages)
+2026-07-03 421440e  (claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
 2026-07-03 dc09f70  (tag: v0.34.0) release: v0.34.0 — vetted-toolset standing authority + bridge network fix
 2026-07-02 29f18c6  test(taskatlas): load SmokeFailedBumps fixture into the registry before smoke
 2026-07-02 74dba2c  docs: v0.34.0 release notes (EN/中文/日本語) + version bumps

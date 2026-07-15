@@ -4,9 +4,9 @@ language: "cn"
 source_note: "Development Path"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Development Path CN
 
@@ -46,20 +46,25 @@ Blueprint gameplay authoring、Code Tools、call_tool、captured args、Make Too
 
 experimental branch。`:8765` + opt-in `:8000` official ToolsetRegistry track。不是 mainline。tag `v0.33.0-preview`(commit `62c1893`)创建于 2026-07-03 02:45 +0900,晚于 `v0.34.0` tag(2026-07-03 00:10 +0900)。位于分支 `experiment/v0.33-ue58-validation`。
 
-### v0.34.0 - 最新公开版
+### v0.34.0 - vetted-toolset authority
 
-vetted-toolset authority 与 Codex bridge network fix。UE 5.6/5.7 public line。
+vetted-toolset authority 与 Codex bridge network fix。UE 5.6/5.7 public line；最后一个打包 UE 5.6 的版本线。
 
-### v0.35 - 计划中
+### v0.35.0 - 最新公开版（Batch 1，tagged 2026-07-14）
 
-下一版本优先 UE 5.7/5.8，UE 5.6 作为过渡期 maintenance canary；先修复空/旧 RAG 索引与测试污染，再推进版本感知检索、source diversity、可解释排序和 rank-aware eval gate。只前移最小 5.8 兼容补丁，不整体合并旧实验分支，也不添加完整内容版 5.8 host。详见 [[v0.35 Development Plan CN]]。
+UE 5.7 与 UE 5.8 成为 primary source targets（root host 迁到 5.7，`Examples/UEvolveExample57` 复用为 5.8 validation host，UE 5.6 保留为 maintenance compile canary），RAG 知识层完成可靠性重构：可恢复的 staged/verified 索引替换、机器可读索引状态、确定性 ASCII/CJK 分词、引擎版本感知检索、rank-aware eval gate。经 PR #7（`codex/v035-rag-ue57-ue58`，`db95ade` → `7032a23` → `6a38612`）在 `a452bfa` 合并，随后 `a5ce43d`（三语 release notes）、`a532d86`（release commit，打 tag）、`6e7b775`（Win SHA 回填）。这是 v0.35 Batch 1；dual-variant 结构与可选 Epic official-MCP 集成按 2026-07-03 director 决策留给后续 batch。详见 [[v0.35 Development Plan CN]]。
 
 ## Recent History Source
 
 完整原文: [[Development Path]], [[GitHub Release History]], [[Git First-Parent History]]
 
 ```text
-2026-07-03 421440e  (HEAD -> main, origin/main, origin/HEAD, claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 6e7b775  (HEAD -> main, origin/main, origin/HEAD) docs: fill v0.35.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 a532d86  (tag: v0.35.0) release: v0.35.0 — UE 5.7/5.8 primary + knowledge-index reliability overhaul
+2026-07-14 a5ce43d  docs: v0.35.0 release notes (EN/中文/日本語) + version bumps
+2026-07-14 a452bfa  Merge pull request #7 from edwinmeng163-oss/codex/v035-rag-ue57-ue58
+2026-07-07 36b6e27  docs(readme): link the trilingual Quartz wiki site (all languages)
+2026-07-03 421440e  (claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
 2026-07-03 dc09f70  (tag: v0.34.0) release: v0.34.0 — vetted-toolset standing authority + bridge network fix
 2026-07-02 29f18c6  test(taskatlas): load SmokeFailedBumps fixture into the registry before smoke
 2026-07-02 74dba2c  docs: v0.34.0 release notes (EN/中文/日本語) + version bumps

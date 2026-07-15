@@ -4,9 +4,9 @@ language: "jp"
 source_note: "Tool Schemas"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Tool Schemas JP
 
@@ -155,9 +155,9 @@ generated: "2026-07-04"
 | `unreal.capture_project_snapshot` | - | `snapshotName`:string, `assetPath`:string, `includeActors`:boolean, `includeAssets`:boolean, `includeBlueprints`:boolean, `includeWidgets`:boolean, `includeMemory`:boolean, `includeSkills`:boolean, `actorLimit`:number, `assetLimit`:number |
 | `unreal.diff_project_snapshot` | - | `beforeSnapshotPath`:string, `afterSnapshotPath`:string |
 | `unreal.install_doctor` | - | `includeDetails`:boolean, `refresh`:boolean, `deepScanEnginePlugins`:boolean |
-| `unreal.knowledge_eval_run` | - | `evalPath`:string, `refreshIndex`:boolean, `includeDetails`:boolean, `limit`:number |
-| `unreal.knowledge_index_refresh` | - | `sourceRoot`:string, `indexRoot`:string, `includeOfficialDocs`:boolean, `includeVersionedDocs`:boolean, `includeToolRegistry`:boolean, `skipLowContent`:boolean, `maxCards`:number, `maxChunkChars`:number, `chunkOverlapChars`:number, `dryRun`:boolean |
-| `unreal.knowledge_search` | - | `query`:string, `categories`:array, `indexRoot`:string, `limit`:number, `maxExcerptChars`:number, `includeText`:boolean |
+| `unreal.knowledge_eval_run` | - | `evalPath`:string, `indexRoot`:string, `refreshIndex`:boolean, `includeDetails`:boolean, `limit`:number |
+| `unreal.knowledge_index_refresh` | - | `sourceRoot`:string, `indexRoot`:string, `includeOfficialDocs`:boolean, `includePromotedSources`:boolean, `includeVersionedDocs`:boolean, `includeToolRegistry`:boolean, `includeActivityLog`:boolean, `includeSkills`:boolean, `allowEmptyIndex`:boolean, `skipLowContent`:boolean, `maxCards`:number, `maxChunkChars`:number, `chunkOverlapChars`:number, `dryRun`:boolean |
+| `unreal.knowledge_search` | - | `query`:string, `categories`:array, `sourceKinds`:array, `groupByKind`:boolean, `indexRoot`:string, `limit`:number, `maxExcerptChars`:number, `includeText`:boolean |
 | `unreal.mcp_apply_scaffold` | - | `toolName`:string, `scaffoldDir`:string, `outputRoot`:string, `dryRun`:boolean, `applyChatCommand`:boolean, `createBackup`:boolean, `validatePatches`:boolean, `allowUnsafePatches`:boolean, `targetDiffPreviewLines`:number |
 | `unreal.mcp_backup_project_state` | - | `label`:string, `reason`:string, `includeSource`:boolean, `includeReadmes`:boolean, `includeProjectMemory`:boolean, `includeManifests`:boolean, `includeBuildLogs`:boolean, `dryRun`:boolean |
 | `unreal.mcp_build_client` | - | `target`:string, `platform`:string, `configuration`:string, `extraArgs`:string, `toolName`:string, `testRequestPath`:string, `testsDir`:string, `scaffoldDir`:string, `memoryKey`:string, `writeProjectMemory`:boolean |
@@ -192,7 +192,7 @@ generated: "2026-07-04"
 | `unreal.mcp_workbench_status` | - | `memoryKey`:string, `includeBuildLogTail`:boolean, `buildLogTailLines`:number |
 | `unreal.preview_change_plan` | - | `task`:string |
 | `unreal.tool_gap_analyze` | - | `task`:string, `riskMax`:string, `limit`:number |
-| `unreal.tool_recommend` | - | `task`:string, `riskMax`:string, `limit`:number, `includeKnowledge`:boolean, `includeWorkflowDraft`:boolean |
+| `unreal.tool_recommend` | - | `task`:string, `indexRoot`:string, `riskMax`:string, `limit`:number, `includeKnowledge`:boolean, `includeWorkflowDraft`:boolean |
 | `unreal.tools.export_package` | `toolName` | `toolName*`:string, `version`:string, `packagePath`:string, `scaffoldDir`:string, `outputRoot`:string, `dryRun`:boolean, `allowRegistryOnly`:boolean |
 | `unreal.tools.import_package` | `packagePath` | `packagePath*`:string, `dryRun`:boolean, `overwriteScaffold`:boolean, `acceptRegistryOnly`:boolean, `skipLock`:boolean |
 | `unreal.tools.list_exportable` | - | - |

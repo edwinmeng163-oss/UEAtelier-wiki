@@ -2,9 +2,9 @@
 title: "Current Object and Status"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Current Object and Status
 
@@ -16,16 +16,17 @@ UEAtelier is an Unreal Editor MCP self-extension workbench. The main object is t
 product: UEAtelier
 deliverable: Plugins/UnrealMcp
 friendlyName: UEAtelier
-versionName: 0.34.0
-version: 47
+versionName: 0.35.0
+version: 48
 type: Editor plugin
 loadingPhase: PostEngineInit
 requiredPlugin: PythonScriptPlugin
 localDevelopmentHost: UEvolve.uproject
-hostEngineAssociation: 5.6
+hostEngineAssociation: 5.7
 supportedEngines:
-  - UE 5.6
-  - UE 5.7
+  - UE 5.7 (primary)
+  - UE 5.8 (primary)
+  - UE 5.6 (maintenance compile canary; last packaged line is v0.34.0)
 endpoint: http://127.0.0.1:8765/mcp
 chatPanel: Window > UEAtelier Chat
 workbenchPanel: Window > UEAtelier Workbench
@@ -55,18 +56,18 @@ The supported public `main` line and the experimental `v0.33.0-preview` line hav
 
 | Line | Engine target | MCP structure | Status |
 | --- | --- | --- | --- |
-| `v0.34.0` / `main` | UE 5.6 + UE 5.7 | UEAtelier-owned localhost MCP server at `:8765/mcp`; Codex bridge can reach it from workspace-write sandbox | latest supported public release |
+| `v0.35.0` / `main` | UE 5.7 + UE 5.8 (UE 5.6 maintenance compile canary) | UEAtelier-owned localhost MCP server at `:8765/mcp`; Codex bridge can reach it from workspace-write sandbox | latest supported public release |
 | `v0.33.0-preview` | UE 5.8 validation | additive official `ToolsetRegistry + ModelContextProtocol` track at opt-in `:8000/mcp`, plus existing `:8765/mcp` | GitHub pre-release / experimental; branch does not merge to `main` as-is |
 
 See [[v0.33 Official MCP Preview]] and [[GitHub Release History]].
 
 ## v0.35 Planned Transition
 
-v0.35 development will prioritize UE 5.7 and UE 5.8, with UE 5.6 retained initially as a transitional maintenance canary. RAG reliability and retrieval quality are the main product focus: test isolation, empty/stale index recovery, schema parity, engine-version-aware retrieval, explainable ranking, and rank-aware eval gates. This is a development decision, not a statement of current release support. See [[v0.35 Development Plan]].
+Batch 1 of this transition shipped on 2026-07-14 as `v0.35.0`: UE 5.7 and UE 5.8 are now the primary source targets (root host on 5.7, `Examples/UEvolveExample57` reused as the 5.8 validation host), UE 5.6 stays a maintenance compile canary, and the RAG knowledge layer got its reliability overhaul — recoverable index replacement, machine-readable index states, deterministic ASCII/CJK tokenization, engine-version-aware retrieval, and rank-aware eval gates. The dual-variant structure and optional Epic official-MCP integration remain for a later batch per the 2026-07-03 director decision. See [[v0.35 Development Plan]].
 
 ## Latest Public Release
 
-`v0.34.0` ships the Make-Tool-Set vetting foundation and Codex bridge network fix. It is a drop-in upgrade from `v0.32.2` for UE 5.6 and UE 5.7. Version `0.33` was an internal UE5.8 validation track, not a public release line.
+`v0.35.0` (v0.35 Batch 1) makes UE 5.7 and UE 5.8 the primary targets and overhauls knowledge-index reliability and retrieval quality. It is a drop-in upgrade from `v0.34.0` for UE 5.7/5.8 hosts; no schema migration. UE 5.6 remains a maintenance compile canary — the last UE 5.6-packaged line is `v0.34.0`. Version `0.33` was an internal UE5.8 validation track, not a public release line.
 
 ## v0.34.0 Safety Model
 
@@ -81,10 +82,12 @@ v0.35 development will prioritize UE 5.7 and UE 5.8, with UE 5.6 retained initia
 
 ## Verification State From Project Docs
 
-- UE 5.6 and UE 5.7 dual-engine builds pass.
-- VetMadeTool 11/11, VettedToolset 5/5, CallTool 9/9, and TaskAtlas 38/38 pass.
+- UE 5.7 and UE 5.8 dual-engine builds pass from wiped intermediates.
+- Per engine: RAG 17/17, Gate D 1/1, EngineCompat 2/2, version migration 1/1, VetMadeTool 11/11, VettedToolset 5/5, CallTool 9/9, and TaskAtlas 38/38 pass.
 - Visible `tools/list` count stays 178.
-- Full-host automation converges to two known baseline failures: `RunRecoversStale` and `PieSmoke.MapValidation`.
+- Full-host automation (208 passed per engine) converges to two known baseline failures: `RunRecoversStale` and `PieSmoke.MapValidation`.
+- Stage 2 e2e on fresh `/tmp` TP_Blank projects for both engines, including MCP SDK conformance 6/6; Python fetcher/installer tests 8/8.
+- Windows UE 5.7/5.8 UBT validation is tracked post-release as GitHub issue #8 (CI packaging is not engine evidence).
 
 ## Registry Validation Snapshot
 

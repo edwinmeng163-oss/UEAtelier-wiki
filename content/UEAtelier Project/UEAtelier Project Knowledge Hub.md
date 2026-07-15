@@ -2,9 +2,9 @@
 title: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 
 # UEAtelier Project Knowledge Hub
@@ -22,7 +22,7 @@ This vault section is generated from the UEAtelier source tree and git history. 
 
 - [[Current Object and Status]] - what UEAtelier is right now, what ships, and what is verified.
 - [[Development Path]] - release and development arc reconstructed from git tags, release docs, and first-parent history.
-- [[v0.35 Development Plan]] - planned UE 5.7/5.8 support transition and RAG reliability/quality release gates.
+- [[v0.35 Development Plan]] - UE 5.7/5.8 support transition and RAG reliability/quality release gates; Batch 1 shipped as `v0.35.0`, the dual-variant structure follows in a later batch.
 - [[GitHub Release History]] - all GitHub releases, assets, digests, bodies, plus tag-only milestones.
 - [[v0.33 Official MCP Preview]] - UE 5.8 official-MCP validation structure, separate from the public mainline.
 - [[Git First-Parent History]] - the full first-parent commit trail captured from git.
@@ -39,18 +39,18 @@ This vault section is generated from the UEAtelier source tree and git history. 
 | --- | --- |
 | Product | UEAtelier, Unreal Editor MCP self-extension workbench |
 | Main deliverable | `Plugins/UnrealMcp` |
-| Plugin version | `0.34.0` |
+| Plugin version | `0.35.0` |
 | Plugin friendly name | `UEAtelier` |
-| Engine association | `5.6` for `UEvolve.uproject`; source supports UE 5.6 and UE 5.7 |
+| Engine association | `5.7` for `UEvolve.uproject`; source targets UE 5.7 and UE 5.8 (UE 5.6 maintenance compile canary) |
 | Endpoint | `http://127.0.0.1:8765/mcp` |
 | Chat UI | `Window > UEAtelier Chat` |
 | Workbench UI | `Window > UEAtelier Workbench` |
 | Registry tools | 190 total, 178 visible, 12 legacy hidden |
-| Git branch/head | `main` / `36b6e27` |
-| Git describe | `v0.34.0-2-g36b6e27` |
-| GitHub releases | 38 releases checked; latest public `v0.34.0`; `v0.33.0-preview` is experimental pre-release |
-| First-parent commits | 296 |
-| Latest commit | `2026-07-07 36b6e27 docs(readme): link the trilingual Quartz wiki site (all languages)` |
+| Git branch/head | `main` / `6e7b775` |
+| Git describe | `v0.35.0-1-g6e7b775` |
+| GitHub releases | 39 releases checked; latest public `v0.35.0`; `v0.33.0-preview` is experimental pre-release |
+| First-parent commits | 300 |
+| Latest commit | `2026-07-14 6e7b775 docs: fill v0.35.0 Win zip SHA-256 into release notes (all languages)` |
 | Worktree status when generated | `clean` |
 
 ## Source Files Used
@@ -66,6 +66,7 @@ This vault section is generated from the UEAtelier source tree and git history. 
 - `Docs/SelfExtensionPipeline.md`
 - `Docs/CallTool.md`
 - `Docs/Release-2026-07.md`
+- `Docs/Release-2026-07b.md`
 - `Tools/UnrealMcpToolRegistry/tools.json`
 - `Schemas/UnrealMcpKnowledgeCard.schema.json`
 - `Tools/UnrealMcpKnowledge/Evals/core_rag_eval.json`

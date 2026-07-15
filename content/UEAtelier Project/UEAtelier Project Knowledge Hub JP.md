@@ -4,9 +4,9 @@ language: "jp"
 source_note: "UEAtelier Project Knowledge Hub"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "36b6e27"
-source_describe: "v0.34.0-2-g36b6e27"
-generated: "2026-07-10"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # UEAtelier プロジェクト知識ハブ
 
@@ -22,7 +22,7 @@ generated: "2026-07-10"
 
 - [[Current Object and Status JP]] - UEAtelier の現在の姿、出荷中のバージョン、検証状態。
 - [[Development Path JP]] - git とリリースから見た開発の流れ。
-- [[v0.35 Development Plan JP]] - UE 5.7/5.8 優先サポートと RAG reliability/quality gate の計画。
+- [[v0.35 Development Plan JP]] - UE 5.7/5.8 優先サポートと RAG reliability/quality gate の計画。Batch 1 は `v0.35.0` として公開済み、dual-variant 構造は後続 batch。
 - [[GitHub Release History JP]] - GitHub Releases のローカライズ済み索引。完全な本文は原文ページに保持。
 - [[v0.33 Official MCP Preview JP]] - UE 5.8 公式 MCP 検証版の構造。公開 mainline とは別物。
 - [[Git First-Parent History JP]] - first-parent 履歴の読み方と原文ログへのリンク。
@@ -40,10 +40,10 @@ generated: "2026-07-10"
 | --- | --- |
 | 製品 | UEAtelier, Unreal Editor MCP self-extension workbench |
 | 主成果物 | `Plugins/UnrealMcp` |
-| 最新公開版 | `v0.34.0` |
+| 最新公開版 | `v0.35.0` |
 | 実験的 preview | `v0.33.0-preview` は UE 5.8 official-MCP 検証版 |
-| 対応エンジン | public mainline は UE 5.6 / UE 5.7 |
+| 対応エンジン | public mainline は UE 5.7 / UE 5.8 が primary（UE 5.6 は maintenance compile canary） |
 | 標準 endpoint | `http://127.0.0.1:8765/mcp` |
 | ToolRegistry | 190 total, 178 visible, 12 legacy hidden |
-| GitHub releases | 38 releases checked |
-| Git head | `main` / `36b6e27` |
+| GitHub releases | 39 releases checked |
+| Git head | `main` / `6e7b775` |

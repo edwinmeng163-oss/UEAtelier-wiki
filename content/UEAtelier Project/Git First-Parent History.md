@@ -2,9 +2,9 @@
 title: "Git First-Parent History"
 source_repo: "https://github.com/edwinmeng163-oss/UEAtelier"
 source_branch: "main"
-source_head: "421440e"
-source_describe: "v0.34.0-1-g421440e"
-generated: "2026-07-04"
+source_head: "6e7b775"
+source_describe: "v0.35.0-1-g6e7b775"
+generated: "2026-07-14"
 ---
 # Git First-Parent History
 
@@ -14,12 +14,17 @@ Captured with:
 git log --first-parent --date=short --pretty=format:'%ad %h %d %s'
 ```
 
-First-parent commit count at generation time: 295.
+First-parent commit count at generation time: 300.
 
 ## Newest First
 
 ```text
-2026-07-03 421440e  (HEAD -> main, origin/main, origin/HEAD, claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 6e7b775  (HEAD -> main, origin/main, origin/HEAD) docs: fill v0.35.0 Win zip SHA-256 into release notes (all languages)
+2026-07-14 a532d86  (tag: v0.35.0) release: v0.35.0 — UE 5.7/5.8 primary + knowledge-index reliability overhaul
+2026-07-14 a5ce43d  docs: v0.35.0 release notes (EN/中文/日本語) + version bumps
+2026-07-14 a452bfa  Merge pull request #7 from edwinmeng163-oss/codex/v035-rag-ue57-ue58
+2026-07-07 36b6e27  docs(readme): link the trilingual Quartz wiki site (all languages)
+2026-07-03 421440e  (claude/gallant-sanderson-832638) docs: fill v0.34.0 Win zip SHA-256 into release notes (all languages)
 2026-07-03 dc09f70  (tag: v0.34.0) release: v0.34.0 — vetted-toolset standing authority + bridge network fix
 2026-07-02 29f18c6  test(taskatlas): load SmokeFailedBumps fixture into the registry before smoke
 2026-07-02 74dba2c  docs: v0.34.0 release notes (EN/中文/日本語) + version bumps
